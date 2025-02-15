@@ -1,8 +1,8 @@
 import FeatureCard from "../shared/FeatureCard";
 import Tag from "../shared/Tag";
-import avatar1 from "@/assets/images/avatar-ashwin-santiago.jpg";
-import avatar2 from "@/assets/images/avatar-florence-shaw.jpg";
-import avatar3 from "@/assets/images/avatar-lula-meyers.jpg";
+import avatar1 from "../../assets/images/avatar-ashwin-santiago.jpg";
+import avatar2 from "../../assets/images/avatar-florence-shaw.jpg";
+import avatar3 from "../../assets/images/avatar-lula-meyers.jpg";
 import Avatar from "../shared/Avatar";
 import { Ellipsis, Sparkle } from "lucide-react";
 import Key from "../shared/Key";
