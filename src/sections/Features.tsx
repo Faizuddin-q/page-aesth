@@ -7,7 +7,7 @@ import avatar2 from "@/assets/images/avatar-florence-shaw.jpg";
 import avatar3 from "@/assets/images/avatar-lula-meyers.jpg";
 import Image from "next/image";
 import Avatar from "@/components/Avatar";
-import { Ellipsis } from "lucide-react";
+import { Ellipsis, Sparkle, Sparkles } from "lucide-react";
 import Key from "@/components/Key";
 import { motion } from "framer-motion";
 
@@ -157,7 +157,7 @@ export default function Features() {
                             key={feature}
                         >
                             <span className="bg-lime-400 text-neutral-900 size-5 rounded-full inline-flex items-center justify-center text-xl group-hover:rotate-45 transition duration-500">
-                                &#10038;
+                                <Sparkle/>
                             </span>
                             <span className="font-medium md:text-lg">
                                 {feature}

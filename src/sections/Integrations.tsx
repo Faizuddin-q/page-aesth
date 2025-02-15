@@ -55,7 +55,7 @@ export default function Integrations() {
                         </h2>
 
                         <p className="text-white/50 mt-4 text-lg ">
-                            Layers seamessly connects with your favourite tools
+                            DesignMinds seamessly connects with your favourite tools
                             and platforms. It's easy to plug into any workflow
                             and collaborate platforms.
                         </p>

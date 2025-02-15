@@ -7,6 +7,7 @@ import Integrations from "@/sections/Integrations";
 import Introduction from "@/sections/Introduction";
 import LogoTicker from "@/sections/LogoTicker";
 import Navbar from "@/sections/Navbar";
+import { Pricing } from "@/sections/Pricing";
 import { ProductShowcase } from "@/sections/ProductShowcase";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
             <Introduction />
             <Features />
             <ProductShowcase/>
+            <Pricing/>
             <Integrations />
             <Faqs />
             <CallToAction />

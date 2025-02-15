@@ -40,7 +40,7 @@ export default function Introduction() {
             <div className="container">
                 <div className="sticky top-28 md:top-32">
                     <div className="flex justify-center">
-                        <Tag>Introduction Layers</Tag>
+                        <Tag>Introduction DesignMinds</Tag>
                     </div>
                     <div className="text-4xl md:text-6xl lg:text-7xl text-center font-medium mt-10 ">
                         <span>Your crative process deserves better.&nbsp;</span>
@@ -56,7 +56,7 @@ export default function Introduction() {
                             ))}
                         </span>
                         <span className="text-lime-400 block">
-                            That&apos;s why we built Layers.
+                            That&apos;s why we built DesignMinds.
                         </span>
                     </div>
                 </div>

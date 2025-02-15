@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimationPlaybackControls, motion, useAnimate } from "framer-motion";
+import { Sparkle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -39,9 +40,7 @@ export default function CallToAction() {
                 >
                     {Array.from({ length: 10 }).map((_, index) => (
                         <div key={index} className="flex items-center gap-16">
-                            <span className="text-lime-400 text-7xl ">
-                                &#10038;
-                            </span>
+                            <Sparkle className=" text-lime-400 w-16 h-16"  />
                             <span className={twMerge(slowDownAnimation && "text-lime-400")}>Try it for free</span>
                         </div>
                     ))}

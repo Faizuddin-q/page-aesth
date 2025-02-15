@@ -1,5 +1,6 @@
 import Image from "next/image";
-import siteLogo from "@/assets/images/logo.svg";
+
+import Tag from "@/components/Tag";
 
 const footerLinks = [
     { href: "#", label: "Contact" },
@@ -13,7 +14,7 @@ export default function Footer() {
             <div className="container">
                 <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-6">
                     <div>
-                        <Image src={siteLogo} alt="Layers Logo" />
+                    <Tag> DesignMinds</Tag>
                     </div>
                     <div>
                         <nav className="flex gap-6">
