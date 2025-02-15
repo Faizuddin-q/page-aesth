@@ -9,10 +9,11 @@ import LogoTicker from "@/sections/LogoTicker";
 import Navbar from "@/sections/Navbar";
 import { Pricing } from "@/sections/Pricing";
 import { ProductShowcase } from "@/sections/ProductShowcase";
-
+import { Analytics } from "@vercel/analytics/react"
 export default function Home() {
     return (
         <>
+            <Analytics />
             <Navbar />
             <Hero />
             <LogoTicker />
