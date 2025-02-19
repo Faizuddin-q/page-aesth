@@ -1,30 +1,26 @@
-"use client";
 
 import { AnimationPlaybackControls, motion, useAnimate } from "framer-motion";
+import { Sparkle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { twMerge } from "tailwind-merge";
 
-export default function CallToAction() {
-    const animation = useRef<AnimationPlaybackControls>();
+const CallToAction: React.FC = () => {
+    const animation = useRef<AnimationPlaybackControls | null>(null);
     const [scope, animate] = useAnimate();
-
     const [slowDownAnimation, setSlowDownAnimation] = useState(false);
 
     useEffect(() => {
-        animation.current = animate(
-            scope.current,
-            { x: "-50%" },
-            { duration: 30, ease: "linear", repeat: Infinity }
-        );
-    }, []);
+        if (scope.current) {
+            animation.current = animate(
+                scope.current,
+                { x: "-50%" },
+                { duration: 30, ease: "linear", repeat: Infinity }
+            );
+        }
+    }, [animate, scope]);
 
     useEffect(() => {
         if (animation.current) {
-            if (slowDownAnimation) {
-                animation.current.speed = 0.5;
-            } else {
-                animation.current.speed = 1;
-            }
+            animation.current.speed = slowDownAnimation ? 0.5 : 1;
         }
     }, [slowDownAnimation]);
 
@@ -37,12 +33,12 @@ export default function CallToAction() {
                     onMouseEnter={() => setSlowDownAnimation(true)}
                     onMouseLeave={() => setSlowDownAnimation(false)}
                 >
-                    {Array.from({ length: 10 }).map((_, index) => (
+                    {[...Array(10)].map((_, index) => (
                         <div key={index} className="flex items-center gap-16">
-                            <span className="text-lime-400 text-7xl ">
-                                &#10038;
+                            <Sparkle className="text-lime-400 w-16 h-16" />
+                            <span className={slowDownAnimation ? "text-lime-400" : ""}>
+                                Try it for free
                             </span>
-                            <span className={twMerge(slowDownAnimation && "text-lime-400")}>Try it for free</span>
                         </div>
                     ))}
                 </motion.div>
@@ -50,3 +46,4 @@ export default function CallToAction() {
         </section>
     );
 }
+export default CallToAction;
