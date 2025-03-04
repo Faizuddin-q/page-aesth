@@ -11,6 +11,7 @@ import cursorImage from "@/assets/images/cursor-you.svg";
 
 
 
+
 export default function Hero() {
     const [leftDesignScope, leftDesignAnimate] = useAnimate();
     const [leftPointerScope, leftPointerAnimate] = useAnimate();
@@ -65,6 +66,7 @@ export default function Hero() {
                 cursor: `url(${cursorImage.src}), auto`,
             }}
         >
+          
             <div className="container relative ">
                 <motion.div
                     ref={leftDesignScope}
