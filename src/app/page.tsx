@@ -13,9 +13,9 @@ import { Analytics } from "@vercel/analytics/next";
 export default function Home() {
     return (
         <>
-            <Analytics />
             <Navbar />
             <Hero />
+            <Analytics />
             <LogoTicker />
             <Introduction />
             <Features />
